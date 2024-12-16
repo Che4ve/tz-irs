@@ -1,0 +1,273 @@
+@import "_default.scss";
+
+.citizen-profile__container {
+    $inline-padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: flex-start;
+
+    padding-left: $margin-left-default + $inline-padding;
+    padding-right: $inline-padding;
+    padding-top: $margin-top-default + 25px;
+
+    margin-bottom: 50px;
+
+    width: calc(100vw - $margin-left-default - 2*$inline-padding);
+    height: 100%;
+
+    //background-color: transparentize($color-primary, 0.9);
+
+    &:before {
+        z-index: -1;
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+
+        background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgOTAwIDYwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSI+PHBhdGggZD0iTTAgNDA4TDIxLjUgNDA1LjdDNDMgNDAzLjMgODYgMzk4LjcgMTI4LjggMzk0LjJDMTcxLjcgMzg5LjcgMjE0LjMgMzg1LjMgMjU3LjIgMzkyLjdDMzAwIDQwMCAzNDMgNDE5IDM4NS44IDQyOC41QzQyOC43IDQzOCA0NzEuMyA0MzggNTE0LjIgNDMwQzU1NyA0MjIgNjAwIDQwNiA2NDIuOCA0MDhDNjg1LjcgNDEwIDcyOC4zIDQzMCA3NzEuMiA0MzAuNUM4MTQgNDMxIDg1NyA0MTIgODc4LjUgNDAyLjVMOTAwIDM5M0w5MDAgNjAxTDg3OC41IDYwMUM4NTcgNjAxIDgxNCA2MDEgNzcxLjIgNjAxQzcyOC4zIDYwMSA2ODUuNyA2MDEgNjQyLjggNjAxQzYwMCA2MDEgNTU3IDYwMSA1MTQuMiA2MDFDNDcxLjMgNjAxIDQyOC43IDYwMSAzODUuOCA2MDFDMzQzIDYwMSAzMDAgNjAxIDI1Ny4yIDYwMUMyMTQuMyA2MDEgMTcxLjcgNjAxIDEyOC44IDYwMUM4NiA2MDEgNDMgNjAxIDIxLjUgNjAxTDAgNjAxWiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDQ2MkwyMS41IDQ1OS4zQzQzIDQ1Ni43IDg2IDQ1MS4zIDEyOC44IDQ1Ni4yQzE3MS43IDQ2MSAyMTQuMyA0NzYgMjU3LjIgNDcxLjNDMzAwIDQ2Ni43IDM0MyA0NDIuMyAzODUuOCA0NDIuNUM0MjguNyA0NDIuNyA0NzEuMyA0NjcuMyA1MTQuMiA0NzcuN0M1NTcgNDg4IDYwMCA0ODQgNjQyLjggNDc0LjNDNjg1LjcgNDY0LjcgNzI4LjMgNDQ5LjMgNzcxLjIgNDM5LjJDODE0IDQyOSA4NTcgNDI0IDg3OC41IDQyMS41TDkwMCA0MTlMOTAwIDYwMUw4NzguNSA2MDFDODU3IDYwMSA4MTQgNjAxIDc3MS4yIDYwMUM3MjguMyA2MDEgNjg1LjcgNjAxIDY0Mi44IDYwMUM2MDAgNjAxIDU1NyA2MDEgNTE0LjIgNjAxQzQ3MS4zIDYwMSA0MjguNyA2MDEgMzg1LjggNjAxQzM0MyA2MDEgMzAwIDYwMSAyNTcuMiA2MDFDMjE0LjMgNjAxIDE3MS43IDYwMSAxMjguOCA2MDFDODYgNjAxIDQzIDYwMSAyMS41IDYwMUwwIDYwMVoiIGZpbGw9IiNmZmQ0YjIiPjwvcGF0aD48cGF0aCBkPSJNMCA0NjhMMjEuNSA0NjkuOEM0MyA0NzEuNyA4NiA0NzUuMyAxMjguOCA0NzhDMTcxLjcgNDgwLjcgMjE0LjMgNDgyLjMgMjU3LjIgNDg4LjVDMzAwIDQ5NC43IDM0MyA1MDUuMyAzODUuOCA1MDYuMkM0MjguNyA1MDcgNDcxLjMgNDk4IDUxNC4yIDQ5Mi4yQzU1NyA0ODYuMyA2MDAgNDgzLjcgNjQyLjggNDkwLjNDNjg1LjcgNDk3IDcyOC4zIDUxMyA3NzEuMiA1MDkuM0M4MTQgNTA1LjcgODU3IDQ4Mi4zIDg3OC41IDQ3MC43TDkwMCA0NTlMOTAwIDYwMUw4NzguNSA2MDFDODU3IDYwMSA4MTQgNjAxIDc3MS4yIDYwMUM3MjguMyA2MDEgNjg1LjcgNjAxIDY0Mi44IDYwMUM2MDAgNjAxIDU1NyA2MDEgNTE0LjIgNjAxQzQ3MS4zIDYwMSA0MjguNyA2MDEgMzg1LjggNjAxQzM0MyA2MDEgMzAwIDYwMSAyNTcuMiA2MDFDMjE0LjMgNjAxIDE3MS43IDYwMSAxMjguOCA2MDFDODYgNjAxIDQzIDYwMSAyMS41IDYwMUwwIDYwMVoiIGZpbGw9IiNmZWFiNjgiPjwvcGF0aD48cGF0aCBkPSJNMCA1NjRMMjEuNSA1NTkuN0M0MyA1NTUuMyA4NiA1NDYuNyAxMjguOCA1NDMuNUMxNzEuNyA1NDAuMyAyMTQuMyA1NDIuNyAyNTcuMiA1NDYuN0MzMDAgNTUwLjcgMzQzIDU1Ni4zIDM4NS44IDU1OC4zQzQyOC43IDU2MC4zIDQ3MS4zIDU1OC43IDUxNC4yIDU1NUM1NTcgNTUxLjMgNjAwIDU0NS43IDY0Mi44IDU0Mi44QzY4NS43IDU0MCA3MjguMyA1NDAgNzcxLjIgNTQzLjNDODE0IDU0Ni43IDg1NyA1NTMuMyA4NzguNSA1NTYuN0w5MDAgNTYwTDkwMCA2MDFMODc4LjUgNjAxQzg1NyA2MDEgODE0IDYwMSA3NzEuMiA2MDFDNzI4LjMgNjAxIDY4NS43IDYwMSA2NDIuOCA2MDFDNjAwIDYwMSA1NTcgNjAxIDUxNC4yIDYwMUM0NzEuMyA2MDEgNDI4LjcgNjAxIDM4NS44IDYwMUMzNDMgNjAxIDMwMCA2MDEgMjU3LjIgNjAxQzIxNC4zIDYwMSAxNzEuNyA2MDEgMTI4LjggNjAxQzg2IDYwMSA0MyA2MDEgMjEuNSA2MDFMMCA2MDFaIiBmaWxsPSIjZjc4MDBmIj48L3BhdGg+PC9zdmc+");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        opacity: 0.35;
+    }
+
+    &:after {
+        z-index: -1;
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: transparentize($color-primary, 0.95);
+    }
+
+    .citizen-profile__content {
+        //position: relative;
+        height: 100%;
+        width: 100%;
+        nav {
+            display: flex;
+
+            button {
+
+                height: 50px;
+                width: 125px;
+                background-color: rgba(193, 193, 193, 0.8);
+                outline: none;
+                border: none;
+                color: dimgray;
+                cursor: pointer;
+
+                font-size: 1rem;
+
+                //border-right: 2px solid rgb(142, 141, 141);
+                border-spacing: 20px;
+
+                transition: all 0.3s ease;
+
+                &:first-child {
+                    border-top-left-radius: 8px;
+                }
+
+                &:nth-last-child(2) {
+                    border-top-right-radius: 8px;
+                    border-right: none;
+                }
+
+                &:last-child {
+                    margin-left: auto;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+
+                    background-color: #dde7ff;
+
+                    width: 150px;
+                    border-bottom: none;
+                }
+
+                &:disabled {
+                    position: relative;
+                    background-color: white;
+                    color: black;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 70%;
+                        height: 2px;
+                        border-radius: 20px;
+                        background: transparentize($color-accent, 0.2);
+                        box-shadow: 0px 5px 10px transparentize($color-accent, 0.5);
+                    }
+                }
+
+                &:hover:not(:disabled) {
+                    filter: brightness(0.93);
+                }
+            }
+        }
+        .citizen-profile-page {
+            background-color: white;
+
+            height: 100%;
+            width: 100%;
+
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            .citizen-profile-page__left-section {
+                width: auto;
+                height: auto;
+                border-right: 5px solid transparentize(black, 0.9);
+                padding: 10px 50px 25px 50px;
+            }
+            .citizen-profile-page__right-section {
+                width: 100%;
+                .photo-container {
+                    align-self: center;
+                    padding: 10% 10%;
+                    aspect-ratio: 1;
+                    border-bottom: 5px solid transparentize(black, 0.9);
+
+                    svg {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 1;
+                        //height: 100%;
+                        background-color: transparentize(black, 0.9);
+                        path {
+                            fill: transparentize(black, 0.7);
+                        }
+                        border-radius: 8px;
+                    }
+                }
+                .data-container {
+                    padding: 5px 40px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: auto;
+                    height: 50px;
+
+                    border-block: 1px solid transparentize(black, 0.9);
+                    &:last-child {
+                        border-bottom-width: 2px;
+                    }
+                    opacity: 0.65;
+
+                    span {
+                        margin: auto;
+                    }
+                    div {
+                        display: flex;
+                        aspect-ratio: 1;
+                        height: 90%;
+                        width: auto;
+                        border-radius: 8px;
+                        text-align: center;
+                        p {
+                            font-size: 1.35rem;
+                            margin: auto;
+                        }
+                        svg {
+                            margin: auto;
+                        }
+                    }
+                    &.category {
+                        div {
+                            background-color: #ffd2b9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.citizen-profile-page.general {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    .citizen-profile-page__left-section {
+
+        .general-info__container {
+            display: flex;
+            flex-direction: column;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 25px;
+
+                width: fit-content;
+                padding: 0;
+                li {
+                    display: grid;
+                    grid-template-columns: 200px auto;
+
+                    span {
+                        font-size: 1.125rem;
+                        line-height: 1.5rem;
+
+                        &:first-child {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.citizen-profile-page.family {
+    height: 100vh !important;
+}
+
+.citizen-profile-page.education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .citizen-profile-page__right-section {
+        padding: 10px 50px 10px 50px;
+    }
+}
+
+.citizen-profile-page.edit {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    button[type="submit"] {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        width: calc(100% / 4 * 3);
+
+        opacity: 0.6;
+        background: transparentize($color-accent, 0.4);
+        color: black;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+            background: transparentize($color-accent, 0.05);
+        }
+    }
+
+    .upload-container {
+        padding: 20px 10%;
+    }
+}
+

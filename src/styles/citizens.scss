@@ -1,0 +1,245 @@
+@import "_default.scss";
+
+.citizens__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: flex-start;
+    padding-left: $margin-left-default;
+    padding-top: $margin-top-default;
+
+    width: calc(100vw - $margin-left-default);
+    height: calc(100vh - $margin-top-default);
+
+
+    overflow: auto;
+
+    background-color: transparentize($color-primary, 0.95);
+
+
+    h1 {
+        background-color: $color-primary;
+        padding: 15px 20px;
+        margin-left: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(19, 12, 32, 0.3);
+    }
+    color: transparentize(white, 0.1);
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+
+        background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgOTAwIDYwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSI+PHBhdGggZD0iTTAgNDA4TDIxLjUgNDA1LjdDNDMgNDAzLjMgODYgMzk4LjcgMTI4LjggMzk0LjJDMTcxLjcgMzg5LjcgMjE0LjMgMzg1LjMgMjU3LjIgMzkyLjdDMzAwIDQwMCAzNDMgNDE5IDM4NS44IDQyOC41QzQyOC43IDQzOCA0NzEuMyA0MzggNTE0LjIgNDMwQzU1NyA0MjIgNjAwIDQwNiA2NDIuOCA0MDhDNjg1LjcgNDEwIDcyOC4zIDQzMCA3NzEuMiA0MzAuNUM4MTQgNDMxIDg1NyA0MTIgODc4LjUgNDAyLjVMOTAwIDM5M0w5MDAgNjAxTDg3OC41IDYwMUM4NTcgNjAxIDgxNCA2MDEgNzcxLjIgNjAxQzcyOC4zIDYwMSA2ODUuNyA2MDEgNjQyLjggNjAxQzYwMCA2MDEgNTU3IDYwMSA1MTQuMiA2MDFDNDcxLjMgNjAxIDQyOC43IDYwMSAzODUuOCA2MDFDMzQzIDYwMSAzMDAgNjAxIDI1Ny4yIDYwMUMyMTQuMyA2MDEgMTcxLjcgNjAxIDEyOC44IDYwMUM4NiA2MDEgNDMgNjAxIDIxLjUgNjAxTDAgNjAxWiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDQ2MkwyMS41IDQ1OS4zQzQzIDQ1Ni43IDg2IDQ1MS4zIDEyOC44IDQ1Ni4yQzE3MS43IDQ2MSAyMTQuMyA0NzYgMjU3LjIgNDcxLjNDMzAwIDQ2Ni43IDM0MyA0NDIuMyAzODUuOCA0NDIuNUM0MjguNyA0NDIuNyA0NzEuMyA0NjcuMyA1MTQuMiA0NzcuN0M1NTcgNDg4IDYwMCA0ODQgNjQyLjggNDc0LjNDNjg1LjcgNDY0LjcgNzI4LjMgNDQ5LjMgNzcxLjIgNDM5LjJDODE0IDQyOSA4NTcgNDI0IDg3OC41IDQyMS41TDkwMCA0MTlMOTAwIDYwMUw4NzguNSA2MDFDODU3IDYwMSA4MTQgNjAxIDc3MS4yIDYwMUM3MjguMyA2MDEgNjg1LjcgNjAxIDY0Mi44IDYwMUM2MDAgNjAxIDU1NyA2MDEgNTE0LjIgNjAxQzQ3MS4zIDYwMSA0MjguNyA2MDEgMzg1LjggNjAxQzM0MyA2MDEgMzAwIDYwMSAyNTcuMiA2MDFDMjE0LjMgNjAxIDE3MS43IDYwMSAxMjguOCA2MDFDODYgNjAxIDQzIDYwMSAyMS41IDYwMUwwIDYwMVoiIGZpbGw9IiNmZmUxZDAiPjwvcGF0aD48cGF0aCBkPSJNMCA0NjhMMjEuNSA0NjkuOEM0MyA0NzEuNyA4NiA0NzUuMyAxMjguOCA0NzhDMTcxLjcgNDgwLjcgMjE0LjMgNDgyLjMgMjU3LjIgNDg4LjVDMzAwIDQ5NC43IDM0MyA1MDUuMyAzODUuOCA1MDYuMkM0MjguNyA1MDcgNDcxLjMgNDk4IDUxNC4yIDQ5Mi4yQzU1NyA0ODYuMyA2MDAgNDgzLjcgNjQyLjggNDkwLjNDNjg1LjcgNDk3IDcyOC4zIDUxMyA3NzEuMiA1MDkuM0M4MTQgNTA1LjcgODU3IDQ4Mi4zIDg3OC41IDQ3MC43TDkwMCA0NTlMOTAwIDYwMUw4NzguNSA2MDFDODU3IDYwMSA4MTQgNjAxIDc3MS4yIDYwMUM3MjguMyA2MDEgNjg1LjcgNjAxIDY0Mi44IDYwMUM2MDAgNjAxIDU1NyA2MDEgNTE0LjIgNjAxQzQ3MS4zIDYwMSA0MjguNyA2MDEgMzg1LjggNjAxQzM0MyA2MDEgMzAwIDYwMSAyNTcuMiA2MDFDMjE0LjMgNjAxIDE3MS43IDYwMSAxMjguOCA2MDFDODYgNjAxIDQzIDYwMSAyMS41IDYwMUwwIDYwMVoiIGZpbGw9IiNmZmM0YTIiPjwvcGF0aD48cGF0aCBkPSJNMCA1NjRMMjEuNSA1NTkuN0M0MyA1NTUuMyA4NiA1NDYuNyAxMjguOCA1NDMuNUMxNzEuNyA1NDAuMyAyMTQuMyA1NDIuNyAyNTcuMiA1NDYuN0MzMDAgNTUwLjcgMzQzIDU1Ni4zIDM4NS44IDU1OC4zQzQyOC43IDU2MC4zIDQ3MS4zIDU1OC43IDUxNC4yIDU1NUM1NTcgNTUxLjMgNjAwIDU0NS43IDY0Mi44IDU0Mi44QzY4NS43IDU0MCA3MjguMyA1NDAgNzcxLjIgNTQzLjNDODE0IDU0Ni43IDg1NyA1NTMuMyA4NzguNSA1NTYuN0w5MDAgNTYwTDkwMCA2MDFMODc4LjUgNjAxQzg1NyA2MDEgODE0IDYwMSA3NzEuMiA2MDFDNzI4LjMgNjAxIDY4NS43IDYwMSA2NDIuOCA2MDFDNjAwIDYwMSA1NTcgNjAxIDUxNC4yIDYwMUM0NzEuMyA2MDEgNDI4LjcgNjAxIDM4NS44IDYwMUMzNDMgNjAxIDMwMCA2MDEgMjU3LjIgNjAxQzIxNC4zIDYwMSAxNzEuNyA2MDEgMTI4LjggNjAxQzg2IDYwMSA0MyA2MDEgMjEuNSA2MDFMMCA2MDFaIiBmaWxsPSIjZmZhNjc2Ij48L3BhdGg+PC9zdmc+");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        opacity: 0.55;
+    }
+
+
+    .citizens-table__container {
+        position: relative;
+        box-shadow: 10px 10px 20px rgba(19, 12, 32, 0.3);
+        border-radius: 10px;
+        margin-left: 50px;
+
+        .citizen-table__control-block {
+            position: absolute;
+            top: 0;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 50px;
+
+            height: calc(24px + 16px*2);
+            margin-top: 8px;
+            margin-left: 15px;
+
+            font-size: 1.25rem;
+
+            .column-control {
+                display: flex;
+                align-items: center;
+                height: 45%;
+                gap: 10px;
+                .columns-dropdown {
+                    z-index: 1;
+                    padding: 0;
+
+                    aspect-ratio: 1;
+                    background-color: transparent;
+                    border: none;
+
+                    svg {
+                        fill: transparentize(white, 0.2);
+                        height: 80%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .citizens-table {
+            width: clamp(1200px, 100vw - $margin-left-default - 100px, 2400px);
+            //width: auto;
+            background-color: $color-primary;
+            border: 8px solid $color-primary;
+            border-radius: 10px;
+
+            .ant-pagination {
+                color: transparentize(white, 0.5);
+                li {
+                    color: white;
+                    background-color: transparentize(white, 0.95);
+                    a, span {
+                        color: white;
+                    }
+                    svg {
+                        fill: white;
+                    }
+                }
+
+                .ant-pagination-options {
+                    margin-left: 20px;
+                    background-color: transparent;
+                    .ant-select-selector {
+                        background-color: transparentize(white, 0.95);
+                        border-color: transparentize(white, 0.95);
+                    }
+                    .ant-pagination-options-quick-jumper {
+
+                        input {
+                            color: transparentize(white, 0.1);
+                            background-color: transparentize(white, 0.95);
+                            border-color: transparentize(white, 0.95);
+                        }
+                    }
+                    a, span {
+                        color: transparentize(white, 0.1);
+                    }
+                    svg {
+                        color: transparentize(white, 0.1);
+                    }
+                }
+            }
+
+            .ant-table-container {
+                background-color: $color-primary;
+                border-radius: 0px;
+                th, td {
+                    text-wrap: pretty;
+                    color: transparentize(white, 0.2);
+                }
+                table {
+                    a {
+                        filter: brightness(9);
+                    }
+                    .ant-table-cell-fix-left {
+                        background-color: $color-primary;
+                        border-color: transparentize(white, 0.95);
+                    }
+                    thead {
+                        tr {
+                            .ant-table-cell-fix-left {
+                                border-bottom-right-radius: 8px;
+                            }
+                            th {
+                                border-color: $color-primary;
+                                border-width: 8px;
+                                //border-radius: 100px;
+                                border-radius: 0px;
+                                background-color: transparentize(white, 0.95);
+                                backdrop-filter: blur(10px);
+                                -webkit-backdrop-filter: blur(10px);
+
+                                &:hover {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        color: white;
+                        background-color: $color-primary;
+                        cursor: pointer;
+                        tr {
+                            transition: background-color 0.3s ease;
+                            .ant-table-cell-fix-left {
+                                background-color: $color-primary;
+                                border-bottom-right-radius: 8px;
+                                border-bottom-left-radius: 8px;
+                            }
+
+                            &:has(td:hover) {
+                                background-color: transparentize(white, 0.95);
+                                .ant-table-cell-fix-left {
+                                    background-color: transparentize($color-primary, 0.3);
+                                }
+                            }
+                        }
+
+                        td {
+                            background-color: transparentize(white, 0.95);
+                            border-color: $color-primary;
+                            border-width: 8px;
+
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-wrap: pretty;
+                            color: transparentize(white, 0.2);
+                            text-overflow: ellipsis;
+
+                            &:last-child {
+                                border-right: 1px solid $color-primary;
+                                overflow: scroll;
+                                text-overflow: unset;
+                                border-top-right-radius: 8px;
+                            }
+                            &:nth-child(2) {
+                                border-top-left-radius: 8px;
+                            }
+                        }
+
+                        .ant-table-placeholder {
+                            td {
+                                background-color: transparentize($color-primary, 0.1);
+                                color: transparentize(white, 0.1);
+                                .ant-empty-description {
+                                    color: transparentize(white, 0.1);
+                                }
+                            }
+                        }
+                    }
+
+                }
+                .ant-table-sticky-holder {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.ant-dropdown {
+    background: $color-primary !important;
+    .ant-flex {
+        background: transparentize(white, 0.92) !important;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(8, 6, 25, 0.2);
+
+        label {
+            color: transparentize(white, 0.1);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import "_default.scss";
+
+.news-card__container {
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    width: 100%;
+
+    .ant-badge {
+        width: 100%;
+    }
+}
+
+.news-card {
+    width: 100%;
+    //max-width: 600px;
+    background-color: transparentize(white, 0.95);
+    border: none;
+
+    .ant-typography {
+        color: transparentize(white, 0.1);
+    }
+
+    button:first-of-type {
+        background: transparentize(white, 0.8);
+        &:hover {
+            background-color: transparentize($color-accent, 0.1) !important;
+        }
+    }
+}
+
+.news-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.news-card__content {
+    margin-top: 8px;
+}
+
+.news-card__actions button {
+    margin-right: 8px;
+}

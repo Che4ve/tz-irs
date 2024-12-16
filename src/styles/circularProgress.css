@@ -1,0 +1,56 @@
+.circular-progress {
+  --percentage: 50;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #e0f4ff;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
+}
+.circular-progress .circular-progress__svg {
+  rotate: -90deg;
+  position: relative;
+  width: 100px;
+  aspect-ratio: 1;
+  background-color: rgba(40, 44, 58, 0.85);
+  border-radius: 0%;
+  transition: transform 1s ease;
+  animation: spin 2s ease infinite forwards;
+}
+.circular-progress .circular-progress__svg circle {
+  stroke: #82ca9d;
+  stroke-width: 10px;
+  r: calc(50% - 5px);
+  stroke-dasharray: 283.131px;
+  stroke-dashoffset: calc(2.83131px * (100 - var(--percentage)));
+  stroke-opacity: 0.9;
+  transition: stroke-dashoffset 0.8s ease, stroke-opacity 0.8s ease;
+}
+.circular-progress .circular-progress__percentage {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Roboto Thin", Tahoma, sans-serif;
+  font-weight: 800;
+  color: #82ca9d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  aspect-ratio: 1;
+  background-color: #282c3a;
+  border-radius: 50%;
+  box-shadow: inset 5px 6px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 1s ease;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=circularProgress.css.map */

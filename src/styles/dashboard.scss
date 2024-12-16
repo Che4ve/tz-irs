@@ -1,0 +1,282 @@
+@import "_default.scss";
+
+@mixin cardify() {
+    block-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparentize($color-primary, 0.0);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: $margin-left-default;
+    padding-top: $margin-top-default + 25px;
+    padding-bottom: 25px;
+
+    width: calc(100vw - $margin-left-default);
+    height: auto;
+
+    background-size: cover;
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+
+        background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgOTAwIDYwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiMxZTIyMjkiPjwvcmVjdD48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxXzAiIHgxPSIzMy4zJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjMWUyMjI5IiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzFlMjIyOSIgc3RvcC1vcGFjaXR5PSIxIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMl8wIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iNjYuNyUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIyMCUiIHN0b3AtY29sb3I9IiMxZTIyMjkiIHN0b3Atb3BhY2l0eT0iMSI+PC9zdG9wPjxzdG9wIG9mZnNldD0iODAlIiBzdG9wLWNvbG9yPSIjMWUyMjI5IiBzdG9wLW9wYWNpdHk9IjEiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5MDAsIDYwMCkiPjxwYXRoIGQ9Ik0tMzgxIDBDLTM5NC45IC02MC42IC00MDguOSAtMTIxLjIgLTM3NC43IC0xNTUuMkMtMzQwLjYgLTE4OS4zIC0yNTguNSAtMTk2LjggLTIwNy4yIC0yMDcuMkMtMTU1LjkgLTIxNy42IC0xMzUuNCAtMjMxIC0xMDYgLTI1NS45Qy03Ni42IC0yODAuOSAtMzguMyAtMzE3LjQgMCAtMzU0TDAgMFoiIGZpbGw9IiNmZmE2NzYiPjwvcGF0aD48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPjxwYXRoIGQ9Ik0zMzYgMEMzNzAuOSA2My4yIDQwNS44IDEyNi41IDM3NC43IDE1NS4yQzM0My43IDE4NCAyNDYuNyAxNzguMiAxOTUuMiAxOTUuMkMxNDMuNiAyMTIuMSAxMzcuNSAyNTEuOSAxMTIuNSAyNzEuNkM4Ny42IDI5MS40IDQzLjggMjkxLjIgMCAyOTFMMCAwWiIgZmlsbD0iI2ZmYTY3NiI+PC9wYXRoPjwvZz48L3N2Zz4=");
+        background-size: cover;
+        opacity: 0.6;
+    }
+
+    &:after {
+        z-index: -1;
+        content: ' ';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+
+        background-color: #ffd2b9;
+        background-size: cover;
+        opacity: 0.6;
+    }
+
+    .dashboard__content {
+        display: grid;
+        //grid-template-rows: 150px repeat(3, 100fr);
+        //grid-auto-rows: 420px;
+        //grid-template-columns: repeat(4, minmax(250px, 1fr));
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: 150px;
+        gap: 20px;
+
+        justify-items: stretch;
+        align-items: stretch;
+
+        width: 90%;
+        height: 90%;
+
+        padding: 15px 25px;
+
+        background-color: transparentize($color-primary, 0.15);
+
+        border-radius: 30px;
+        box-shadow: 10px 10px 30px rgba(10, 3, 25, 0.14);
+
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+
+        .age-histogram,
+        .category-histogram,
+        .gender-pie,
+        .conscription-chart,
+        .news-board__container,
+
+        {
+            @include cardify();
+        }
+
+        .age-histogram,
+        .category-histogram,
+        .conscription-chart {
+            grid-column: span 3;
+            grid-row: span 2;
+            block-size: 100%;
+            .recharts-wrapper {
+                text {
+                    fill: transparentize($color-secondary, 0.5);
+                }
+            }
+        }
+
+        .age-histogram {
+            .recharts-wrapper {
+                .recharts-layer {
+                    path {
+                        fill: $color-accent;
+                    }
+                }
+                .recharts-legend-item {
+                    svg {
+                        fill: $color-accent;
+                    }
+                    span {
+                        padding: 0;
+                        margin-left: 10px;
+                        color: transparentize($color-secondary, 0.2);
+                    }
+                }
+            }
+        }
+        .gender-pie {
+            height: auto;
+            padding: 20px 30px;
+
+            color: white;
+
+            grid-column: span 3;
+
+            .gender-pie__left-section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                svg {
+                    margin-right: 15px;
+                    font-size: 24px;
+                    color: white;
+                }
+                h3 {
+                    margin: 10px 0 0 0;
+                }
+
+            }
+            .recharts-layer {
+                path {
+                    stroke: $color-primary;
+                    stroke-width: 5px;
+                }
+                text {
+                    stroke: transparent;
+                }
+            }
+        }
+        .conscription-chart {
+            //height: 300px;
+            flex-direction: column;
+            grid-column: span 6;
+            width: auto;
+            .recharts-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+            .recharts-surface {
+                width: auto !important;
+            }
+            .recharts-layer {
+                path {
+                    stroke: $color-primary;
+                    stroke-width: 5px;
+                }
+            }
+            h1 {
+                color: #82ca9d;
+            }
+        }
+        .stats-card {
+            block-size: auto;
+
+            grid-column: span 4;
+        }
+        .gender-pie {
+            justify-content: space-between;
+            grid-column: span 4;
+            .gender-pie__left-section {
+                text-wrap: wrap;
+                width: 150px;
+            }
+        }
+
+        .news-board__container {
+            grid-column: span 6;
+            grid-row: span 2;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+
+            height: auto;
+            overflow: auto;
+
+            .news-card__container {
+                //margin-top: 20px;
+                height: auto;
+            }
+        }
+
+        .citizens-table__container {
+            grid-column: span 6;
+            grid-row: span 2;
+            overflow: scroll;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            border-radius: 12px;
+
+            .citizens-table__header {
+                @include cardify();
+                height: 60px;
+
+                color: transparentize(white, 0.1);
+                a {
+                    color: $color-accent;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: transparentize(#9a9aff, 0.4);
+                    }
+                }
+            }
+
+            .citizens-table {
+                margin-top: 15px;
+                @include cardify();
+                border-inline: 10px solid $color-primary;
+
+                height: 100%;
+                width: 100%;
+                th, td {
+                    color: transparentize(white, 0.2);
+                }
+                .ant-table-container {
+                    background-color: $color-primary;
+                    border-radius: 0px;
+                    .ant-table-sticky-holder {
+                        border-radius: 0px;
+                        background-color: $color-primary;
+                        th {
+                            border-color: $color-primary;
+                            background: $color-primary;
+                        }
+                    }
+                }
+                tbody {
+                    color: white;
+                    background-color: $color-primary;
+                    td {
+                        background-color: transparentize(white, 0.95);
+                        border-color: $color-primary;
+                        border-width: 10px;
+                        &:last-child {
+                            border-right: 1px solid $color-primary;
+                        }
+                    }
+                    tr {
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        &:has(td:hover) {
+                            background-color: transparentize(white, 0.95);
+                            .ant-table-cell-fix-left {
+                                background-color: transparentize($color-primary, 0.3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+

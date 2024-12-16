@@ -1,0 +1,32 @@
+.stats-card {
+  block-size: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c3a;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.stats-card .stats-card__left-section {
+  display: flex;
+  align-items: center;
+}
+.stats-card svg {
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+}
+.stats-card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+.stats-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #b0b3c8;
+}
+
+/*# sourceMappingURL=statsCard.css.map */

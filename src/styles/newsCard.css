@@ -1,0 +1,38 @@
+.news-card__container {
+  width: 100%;
+}
+.news-card__container .ant-badge {
+  width: 100%;
+}
+
+.news-card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+}
+.news-card .ant-typography {
+  color: rgba(255, 255, 255, 0.9);
+}
+.news-card button:first-of-type {
+  background: rgba(255, 255, 255, 0.2);
+}
+.news-card button:first-of-type:hover {
+  background-color: rgba(255, 166, 118, 0.9) !important;
+}
+
+.news-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.news-card__content {
+  margin-top: 8px;
+}
+
+.news-card__actions button {
+  margin-right: 8px;
+}
+
+/*# sourceMappingURL=newsCard.css.map */

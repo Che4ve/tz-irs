@@ -1,0 +1,202 @@
+.citizens__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: flex-start;
+  padding-left: 75px;
+  padding-top: 60px;
+  width: calc(100vw - 75px);
+  height: calc(100vh - 60px);
+  overflow: auto;
+  background-color: rgba(40, 44, 58, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+}
+.citizens__container h1 {
+  background-color: #282c3a;
+  padding: 15px 20px;
+  margin-left: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(19, 12, 32, 0.3);
+}
+.citizens__container:before {
+  content: " ";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgOTAwIDYwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSI+PHBhdGggZD0iTTAgNDA4TDIxLjUgNDA1LjdDNDMgNDAzLjMgODYgMzk4LjcgMTI4LjggMzk0LjJDMTcxLjcgMzg5LjcgMjE0LjMgMzg1LjMgMjU3LjIgMzkyLjdDMzAwIDQwMCAzNDMgNDE5IDM4NS44IDQyOC41QzQyOC43IDQzOCA0NzEuMyA0MzggNTE0LjIgNDMwQzU1NyA0MjIgNjAwIDQwNiA2NDIuOCA0MDhDNjg1LjcgNDEwIDcyOC4zIDQzMCA3NzEuMiA0MzAuNUM4MTQgNDMxIDg1NyA0MTIgODc4LjUgNDAyLjVMOTAwIDM5M0w5MDAgNjAxTDg3OC41IDYwMUM4NTcgNjAxIDgxNCA2MDEgNzcxLjIgNjAxQzcyOC4zIDYwMSA2ODUuNyA2MDEgNjQyLjggNjAxQzYwMCA2MDEgNTU3IDYwMSA1MTQuMiA2MDFDNDcxLjMgNjAxIDQyOC43IDYwMSAzODUuOCA2MDFDMzQzIDYwMSAzMDAgNjAxIDI1Ny4yIDYwMUMyMTQuMyA2MDEgMTcxLjcgNjAxIDEyOC44IDYwMUM4NiA2MDEgNDMgNjAxIDIxLjUgNjAxTDAgNjAxWiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDQ2MkwyMS41IDQ1OS4zQzQzIDQ1Ni43IDg2IDQ1MS4zIDEyOC44IDQ1Ni4yQzE3MS43IDQ2MSAyMTQuMyA0NzYgMjU3LjIgNDcxLjNDMzAwIDQ2Ni43IDM0MyA0NDIuMyAzODUuOCA0NDIuNUM0MjguNyA0NDIuNyA0NzEuMyA0NjcuMyA1MTQuMiA0NzcuN0M1NTcgNDg4IDYwMCA0ODQgNjQyLjggNDc0LjNDNjg1LjcgNDY0LjcgNzI4LjMgNDQ5LjMgNzcxLjIgNDM5LjJDODE0IDQyOSA4NTcgNDI0IDg3OC41IDQyMS41TDkwMCA0MTlMOTAwIDYwMUw4NzguNSA2MDFDODU3IDYwMSA4MTQgNjAxIDc3MS4yIDYwMUM3MjguMyA2MDEgNjg1LjcgNjAxIDY0Mi44IDYwMUM2MDAgNjAxIDU1NyA2MDEgNTE0LjIgNjAxQzQ3MS4zIDYwMSA0MjguNyA2MDEgMzg1LjggNjAxQzM0MyA2MDEgMzAwIDYwMSAyNTcuMiA2MDFDMjE0LjMgNjAxIDE3MS43IDYwMSAxMjguOCA2MDFDODYgNjAxIDQzIDYwMSAyMS41IDYwMUwwIDYwMVoiIGZpbGw9IiNmZmUxZDAiPjwvcGF0aD48cGF0aCBkPSJNMCA0NjhMMjEuNSA0NjkuOEM0MyA0NzEuNyA4NiA0NzUuMyAxMjguOCA0NzhDMTcxLjcgNDgwLjcgMjE0LjMgNDgyLjMgMjU3LjIgNDg4LjVDMzAwIDQ5NC43IDM0MyA1MDUuMyAzODUuOCA1MDYuMkM0MjguNyA1MDcgNDcxLjMgNDk4IDUxNC4yIDQ5Mi4yQzU1NyA0ODYuMyA2MDAgNDgzLjcgNjQyLjggNDkwLjNDNjg1LjcgNDk3IDcyOC4zIDUxMyA3NzEuMiA1MDkuM0M4MTQgNTA1LjcgODU3IDQ4Mi4zIDg3OC41IDQ3MC43TDkwMCA0NTlMOTAwIDYwMUw4NzguNSA2MDFDODU3IDYwMSA4MTQgNjAxIDc3MS4yIDYwMUM3MjguMyA2MDEgNjg1LjcgNjAxIDY0Mi44IDYwMUM2MDAgNjAxIDU1NyA2MDEgNTE0LjIgNjAxQzQ3MS4zIDYwMSA0MjguNyA2MDEgMzg1LjggNjAxQzM0MyA2MDEgMzAwIDYwMSAyNTcuMiA2MDFDMjE0LjMgNjAxIDE3MS43IDYwMSAxMjguOCA2MDFDODYgNjAxIDQzIDYwMSAyMS41IDYwMUwwIDYwMVoiIGZpbGw9IiNmZmM0YTIiPjwvcGF0aD48cGF0aCBkPSJNMCA1NjRMMjEuNSA1NTkuN0M0MyA1NTUuMyA4NiA1NDYuNyAxMjguOCA1NDMuNUMxNzEuNyA1NDAuMyAyMTQuMyA1NDIuNyAyNTcuMiA1NDYuN0MzMDAgNTUwLjcgMzQzIDU1Ni4zIDM4NS44IDU1OC4zQzQyOC43IDU2MC4zIDQ3MS4zIDU1OC43IDUxNC4yIDU1NUM1NTcgNTUxLjMgNjAwIDU0NS43IDY0Mi44IDU0Mi44QzY4NS43IDU0MCA3MjguMyA1NDAgNzcxLjIgNTQzLjNDODE0IDU0Ni43IDg1NyA1NTMuMyA4NzguNSA1NTYuN0w5MDAgNTYwTDkwMCA2MDFMODc4LjUgNjAxQzg1NyA2MDEgODE0IDYwMSA3NzEuMiA2MDFDNzI4LjMgNjAxIDY4NS43IDYwMSA2NDIuOCA2MDFDNjAwIDYwMSA1NTcgNjAxIDUxNC4yIDYwMUM0NzEuMyA2MDEgNDI4LjcgNjAxIDM4NS44IDYwMUMzNDMgNjAxIDMwMCA2MDEgMjU3LjIgNjAxQzIxNC4zIDYwMSAxNzEuNyA2MDEgMTI4LjggNjAxQzg2IDYwMSA0MyA2MDEgMjEuNSA2MDFMMCA2MDFaIiBmaWxsPSIjZmZhNjc2Ij48L3BhdGg+PC9zdmc+");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  opacity: 0.55;
+}
+.citizens__container .citizens-table__container {
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(19, 12, 32, 0.3);
+  border-radius: 10px;
+  margin-left: 50px;
+}
+.citizens__container .citizens-table__container .citizen-table__control-block {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  height: 56px;
+  margin-top: 8px;
+  margin-left: 15px;
+  font-size: 1.25rem;
+}
+.citizens__container .citizens-table__container .citizen-table__control-block .column-control {
+  display: flex;
+  align-items: center;
+  height: 45%;
+  gap: 10px;
+}
+.citizens__container .citizens-table__container .citizen-table__control-block .column-control .columns-dropdown {
+  z-index: 1;
+  padding: 0;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: none;
+}
+.citizens__container .citizens-table__container .citizen-table__control-block .column-control .columns-dropdown svg {
+  fill: rgba(255, 255, 255, 0.8);
+  height: 80%;
+  width: 100%;
+}
+.citizens__container .citizens-table__container .citizens-table {
+  width: clamp(1200px, 100vw - 75px - 100px, 2400px);
+  background-color: #282c3a;
+  border: 8px solid #282c3a;
+  border-radius: 10px;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination {
+  color: rgba(255, 255, 255, 0.5);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination li {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination li a, .citizens__container .citizens-table__container .citizens-table .ant-pagination li span {
+  color: white;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination li svg {
+  fill: white;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination .ant-pagination-options {
+  margin-left: 20px;
+  background-color: transparent;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination .ant-pagination-options .ant-select-selector {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination .ant-pagination-options .ant-pagination-options-quick-jumper input {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination .ant-pagination-options a, .citizens__container .citizens-table__container .citizens-table .ant-pagination .ant-pagination-options span {
+  color: rgba(255, 255, 255, 0.9);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-pagination .ant-pagination-options svg {
+  color: rgba(255, 255, 255, 0.9);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container {
+  background-color: #282c3a;
+  border-radius: 0px;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container th, .citizens__container .citizens-table__container .citizens-table .ant-table-container td {
+  text-wrap: pretty;
+  color: rgba(255, 255, 255, 0.8);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table a {
+  filter: brightness(9);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table .ant-table-cell-fix-left {
+  background-color: #282c3a;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table thead tr .ant-table-cell-fix-left {
+  border-bottom-right-radius: 8px;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table thead tr th {
+  border-color: #282c3a;
+  border-width: 8px;
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table thead tr th:hover {
+  background-color: transparent;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody {
+  color: white;
+  background-color: #282c3a;
+  cursor: pointer;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody tr {
+  transition: background-color 0.3s ease;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody tr .ant-table-cell-fix-left {
+  background-color: #282c3a;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody tr:has(td:hover) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody tr:has(td:hover) .ant-table-cell-fix-left {
+  background-color: rgba(40, 44, 58, 0.7);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody td {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #282c3a;
+  border-width: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-wrap: pretty;
+  color: rgba(255, 255, 255, 0.8);
+  text-overflow: ellipsis;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody td:last-child {
+  border-right: 1px solid #282c3a;
+  overflow: scroll;
+  text-overflow: unset;
+  border-top-right-radius: 8px;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody td:nth-child(2) {
+  border-top-left-radius: 8px;
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody .ant-table-placeholder td {
+  background-color: rgba(40, 44, 58, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container table tbody .ant-table-placeholder td .ant-empty-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+.citizens__container .citizens-table__container .citizens-table .ant-table-container .ant-table-sticky-holder {
+  background-color: transparent;
+}
+
+.ant-dropdown {
+  background: #282c3a !important;
+}
+.ant-dropdown .ant-flex {
+  background: rgba(255, 255, 255, 0.08) !important;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(8, 6, 25, 0.2);
+}
+.ant-dropdown .ant-flex label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/*# sourceMappingURL=citizens.css.map */
