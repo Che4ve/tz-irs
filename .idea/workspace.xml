@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6afa4bd5-d97a-41a4-b100-2fd4c41a563a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AgeHistogram.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoryHistogram.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CircularProgress.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CitizenTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CitizenTableFull.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ConscriptionChart.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GenderPieCHart.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewsBoard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewsCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sidebar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StatsCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TopBoard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/configs/Router.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/configs/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/CitizensData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/SidebarData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/CitizenProfile/CitizenEditBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/CitizenProfile/CitizenEducationBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/CitizenProfile/CitizenFamilyBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/CitizenProfile/CitizenGeneralBlock.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/CitizenProfile/CitizenProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/Citizens.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_default.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/circularProgress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/citizenProfile.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/citizens.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/dashboard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/newsCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/statsCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/topboard.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ptGmXsQ6CYyjyZzoA2AkLJ9wnD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/che4ve/Programming/javascripting/tz-irs/src/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/screens/CitizenProfile" />
+      <recent name="$PROJECT_DIR$/src/configs" />
+      <recent name="$PROJECT_DIR$/src/data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6afa4bd5-d97a-41a4-b100-2fd4c41a563a" name="Changes" comment="" />
+      <created>1733578121453</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733578121453</updated>
+      <workItem from="1733578123692" duration="54566000" />
+      <workItem from="1733738653564" duration="127450000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Che4ve/tz-irs/static/css/main.42726e5f.css",
+    "main.js": "/Che4ve/tz-irs/static/js/main.b95a7620.js",
+    "index.html": "/Che4ve/tz-irs/index.html",
+    "main.42726e5f.css.map": "/Che4ve/tz-irs/static/css/main.42726e5f.css.map",
+    "main.b95a7620.js.map": "/Che4ve/tz-irs/static/js/main.b95a7620.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42726e5f.css",
+    "static/js/main.b95a7620.js"
+  ]
+}
